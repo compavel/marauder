@@ -6,7 +6,7 @@ Built as a static HTML/CSS/JS site for a portfolio. There is no framework, no bu
 
 **Status:** complete, manually tested, and deployed to GitHub Pages. Cart, checkout and the contact form are demonstration-only.
 
-**Live demo:** https://compavel.github.io/marauder/
+**Live demo:** https://compavel.github.io/marauder/ — [![Deploy site](https://github.com/compavel/marauder/actions/workflows/pages.yml/badge.svg)](https://github.com/compavel/marauder/actions/workflows/pages.yml)
 
 ---
 
