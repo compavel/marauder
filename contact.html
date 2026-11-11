@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Talk to us — Marauder</title>
+  <meta name="description" content="Write to the Marauder studio about an order, an object, a press request or a partnership. Two of us read every message and reply within two working days.">
+  <meta name="theme-color" content="#FBF5EC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Talk to us — Marauder">
+  <meta property="og:description" content="Two of us read every message and reply within two working days.">
+  <meta property="og:image" content="assets/img/og-marauder.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="wordmark" href="index.html">Marauder</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html#products">Collection</a>
+        <a href="index.html#values">How we choose</a>
+        <a href="index.html#team">Team</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="header__actions">
+        <button class="cart" type="button" disabled title="Cart is not connected in this demo" aria-label="Cart — not connected in this demo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+        </button>
+        <a class="nav-cta" href="index.html#products">Shop the collection</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" data-menu hidden>
+    <div class="mobile-menu__head">
+      <span class="wordmark">Marauder</span>
+      <button class="mobile-menu__close" type="button" data-menu-close>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        <span class="sr-only">Close menu</span>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <a class="mobile-menu__link" href="index.html#products">Collection</a>
+      <a class="mobile-menu__link" href="index.html#values">How we choose</a>
+      <a class="mobile-menu__link" href="index.html#team">Team</a>
+      <a class="mobile-menu__link" href="contact.html">Contact</a>
+      <a class="mobile-menu__link" href="terms.html">Terms of service</a>
+    </nav>
+    <p class="mobile-menu__meta">Lisbon · Shipping across the EU and UK<br>Replies within two working days</p>
+    <a class="btn btn--primary mobile-menu__cta" href="index.html#products">Shop the collection</a>
+  </div>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="container page-head__inner">
+        <p class="section-number">Contact</p>
+        <h1 class="display-1">Talk to us</h1>
+        <p class="lede">Two of us read every message: Ines answers orders and objects, Theo answers anything about making. We reply within two working days, usually sooner.</p>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="sr-only">Send a message</h2>
+
+          <p class="note form-demo-note" id="contact-demo">
+            <strong>Demo form.</strong> Nothing is sent or stored — this site has no backend.
+            To reach the studio, email <a class="link-underline" href="mailto:hello@marauder.example">hello@marauder.example</a>.
+          </p>
+
+          <noscript>
+            <p class="note form-demo-note">
+              JavaScript is off, so the form cannot validate. It does not send anything either way.
+            </p>
+          </noscript>
+
+          <div class="message message--error form-errors" id="form-errors" role="alert" tabindex="-1" hidden></div>
+
+          <form class="form" data-contact-form method="post" aria-describedby="contact-demo" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="contact-name">Your name</label>
+                <input class="field__control" type="text" id="contact-name" name="name" autocomplete="name" required aria-describedby="contact-name-hint contact-name-error">
+                <p class="field__hint" id="contact-name-hint">As you would like us to address the reply.</p>
+                <p class="field__error" id="contact-name-error">Enter your name using 2 to 80 characters.</p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="contact-email">Email</label>
+                <input class="field__control" type="email" id="contact-email" name="email" autocomplete="email" inputmode="email" required aria-describedby="contact-email-hint contact-email-error">
+                <p class="field__hint" id="contact-email-hint">We reply to this address, once, with no list attached.</p>
+                <p class="field__error" id="contact-email-error">Enter a valid email address, for example name@example.com.</p>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="contact-topic">Topic</label>
+                <select class="field__control" id="contact-topic" name="topic" required aria-describedby="contact-topic-error">
+                  <option value="">Choose a topic</option>
+                  <option value="order">An order or delivery</option>
+                  <option value="product">A question about an object</option>
+                  <option value="press">Press</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="other">Something else</option>
+                </select>
+                <p class="field__error" id="contact-topic-error">Choose a topic so the message reaches the right person.</p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="contact-order">Order number <span class="field__optional">(optional)</span></label>
+                <input class="field__control" type="text" id="contact-order" name="order_ref" maxlength="40" autocomplete="off" aria-describedby="contact-order-hint contact-order-error">
+                <p class="field__hint" id="contact-order-hint">Starts with MRC. Leave empty if you have not ordered.</p>
+                <p class="field__error" id="contact-order-error">Order number can be at most 40 characters.</p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="message">Message</label>
+              <textarea class="field__control" id="message" name="message" rows="7" minlength="20" maxlength="2000" required aria-describedby="message-hint message-counter message-error"></textarea>
+              <p class="field__hint" id="message-hint">What happened, what you are looking at, or what you would like to know. 20 characters minimum.</p>
+              <p class="field__hint" id="message-counter" data-counter aria-live="polite">0 / 2000</p>
+              <p class="field__error" id="message-error">Write at least 20 characters.</p>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="contact-consent" name="consent" required aria-describedby="contact-consent-error">
+              <label for="contact-consent">I agree that Marauder may use my name and email to reply to this message. Nothing else.</label>
+              <p class="field__error" id="contact-consent-error">Please confirm we may reply to your message.</p>
+            </div>
+
+            <div>
+              <button class="btn btn--primary btn--block" type="submit">Send message</button>
+            </div>
+
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+          </form>
+
+          <div class="form-success" id="form-success" hidden>
+            <svg class="form-success__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <h2>Demo form — nothing sent</h2>
+            <p>Your message was not sent and nothing was stored, because this is a front-end demo with no backend. To reach the studio, email <a class="link-underline" href="mailto:hello@marauder.example">hello@marauder.example</a>.</p>
+          </div>
+        </div>
+
+        <aside class="contact-aside" aria-labelledby="studio-title">
+          <h2 id="studio-title">The studio</h2>
+
+          <div class="studio">
+            <dl>
+              <dt>Address</dt>
+              <dd>Rua da Boavista 84<br>1200-069 Lisbon, Portugal</dd>
+              <dt>Hours</dt>
+              <dd>Tuesday to Friday, 10:00–18:00<br>Saturday, 11:00–16:00</dd>
+              <dt>Email</dt>
+              <dd><a href="mailto:hello@marauder.example">hello@marauder.example</a></dd>
+              <dt>Phone</dt>
+              <dd><a href="tel:+351210000000">+351 21 000 0000</a></dd>
+            </dl>
+          </div>
+
+          <div class="map" role="img" aria-label="Map placeholder: the studio is on Rua da Boavista in Lisbon, two streets from the river.">
+            <span>Map — Rua da Boavista, Lisbon</span>
+          </div>
+
+          <p class="note">The studio is a working room, not a shop: four shelves, one long table and a kettle. Write before visiting and we will make sure someone is in.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="wordmark">Marauder</span>
+          <p class="caption">Homeware for two, chosen by hand and paired with care. A small catalogue, rebuilt each season.</p>
+          <p class="footer__stamp">Est. 2026</p>
+        </div>
+        <nav class="footer__col" aria-label="Collection">
+          <h2>Collection</h2>
+          <a href="index.html#products">All objects</a>
+          <a href="product/coupe-plate-set.html">Coupe Plate Set</a>
+          <a href="product/two-handled-vessel.html">Two-Handled Vessel</a>
+          <a href="product/the-pairing-box.html">The Pairing Box</a>
+        </nav>
+        <nav class="footer__col" aria-label="Company">
+          <h2>Company</h2>
+          <a href="index.html#team">Team</a>
+          <a href="index.html#values">How we choose</a>
+          <a href="contact.html">Contact</a>
+          <a href="terms.html">Terms of service</a>
+        </nav>
+        <div class="footer__col">
+          <h2>Studio</h2>
+          <address>Rua da Boavista 84<br>1200-069 Lisbon, Portugal</address>
+          <a href="mailto:hello@marauder.example">hello@marauder.example</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Marauder. Demo concept site: products, team, prices and address are fictional.</p>
+        <p>Photography via Unsplash (Wikimedia Commons). Cart and checkout are not connected.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

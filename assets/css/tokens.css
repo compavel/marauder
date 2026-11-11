@@ -1,0 +1,111 @@
+/* Marauder — design tokens
+   Sumber: DESIGN-BRIEF.md §3. Angka kontras di brief sudah diukur; jangan ubah hex
+   tanpa menghitung ulang pasangannya. */
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('../fonts/bodoni-moda-latin.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/archivo-latin.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Warna */
+  --paper: #fbf5ec;
+  --tint-100: #f9e4d2;
+  --tint-300: #e8a87b;
+  --ink: #2e1406;
+  --ink-soft: #6b4a33;
+  --brand: #7a360c;
+  --brand-hover: #5e2708;
+  --brand-active: #2e1406;
+  --accent: #d4631f;
+  --rule: #e3cdb8;
+  --danger: #7a1b0b;
+
+  /* Tipografi */
+  --font-display: 'Bodoni Moda', 'Iowan Old Style', 'Times New Roman', serif;
+  --font-text: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+
+  --type-display-1: 72px;
+  --lh-display-1: 1;
+  --type-display-2: 48px;
+  --lh-display-2: 1.08;
+  --type-display-3: 32px;
+  --lh-display-3: 1.18;
+  --type-display-4: 24px;
+  --lh-display-4: 1.25;
+  --type-body-1: 18px;
+  --lh-body-1: 1.66;
+  --type-body-2: 16px;
+  --lh-body-2: 1.62;
+  --type-caption: 14px;
+  --lh-caption: 1.57;
+  --type-label: 12px;
+  --tracking-label: 0.14em;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* Layout */
+  --container: 1240px;
+  --gutter: 24px;
+  --margin: 40px;
+  --section-pad: 96px;
+  --nav-h: 72px;
+
+  /* Bentuk */
+  --radius: 0;
+  --shadow-overlay: 0 1px 0 rgba(46, 20, 6, 0.06), 0 16px 40px rgba(46, 20, 6, 0.14);
+  --ring: 2px solid var(--ink);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --margin: 32px;
+    --gutter: 20px;
+    --section-pad: 72px;
+    --nav-h: 56px;
+    --type-display-1: 56px;
+    --type-display-2: 40px;
+    --type-display-3: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --type-display-1: 44px;
+    --type-display-2: 38px;
+    --type-display-3: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --margin: 20px;
+    --section-pad: 56px;
+    --type-display-1: 40px;
+    --lh-display-1: 1.05;
+    --type-display-2: 32px;
+    --type-display-3: 26px;
+    --type-display-4: 22px;
+    --type-body-1: 17px;
+  }
+}

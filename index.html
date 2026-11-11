@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Marauder — Homeware for two</title>
+  <meta name="description" content="A small catalogue of homeware for couples: stoneware, linen, glass and light, chosen by hand and paired with care.">
+  <meta name="theme-color" content="#FBF5EC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marauder — Homeware for two">
+  <meta property="og:description" content="A small catalogue of homeware for couples, chosen by hand and paired with care.">
+  <meta property="og:image" content="assets/img/og-marauder.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="wordmark" href="index.html">Marauder</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#products">Collection</a>
+        <a href="#values">How we choose</a>
+        <a href="#team">Team</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header__actions">
+        <button class="cart" type="button" disabled title="Cart is not connected in this demo" aria-label="Cart — not connected in this demo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+        </button>
+        <a class="nav-cta" href="#products">Shop the collection</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <span>Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" data-menu hidden>
+    <div class="mobile-menu__head">
+      <span class="wordmark">Marauder</span>
+      <button class="mobile-menu__close" type="button" data-menu-close>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        <span class="sr-only">Close menu</span>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <a class="mobile-menu__link" href="#products">Collection</a>
+      <a class="mobile-menu__link" href="#values">How we choose</a>
+      <a class="mobile-menu__link" href="#team">Team</a>
+      <a class="mobile-menu__link" href="contact.html">Contact</a>
+      <a class="mobile-menu__link" href="terms.html">Terms of service</a>
+    </nav>
+    <p class="mobile-menu__meta">Lisbon · Shipping across the EU and UK<br>Replies within two working days</p>
+    <a class="btn btn--primary mobile-menu__cta" href="#products">Shop the collection</a>
+  </div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="section-number">Est. 2026 · Homeware for two</p>
+          <h1 class="display-1" id="hero-title">Objects for the life you are building.</h1>
+          <p class="lede">Considered pieces for couples: a short catalogue, chosen by hand, and a model that helps you find what belongs together.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#products">Shop the collection</a>
+            <a class="link-arrow" href="contact.html">Talk to us</a>
+          </div>
+        </div>
+        <figure class="hero__figure">
+          <div class="media">
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/img/hero-table-mobile.jpg">
+              <img src="assets/img/hero-table.jpg" width="1600" height="1067"
+                   alt="A place setting seen close: stacked pale plates, a rust-red bowl and a silver fork on a linen cloth.">
+            </picture>
+          </div>
+          <figcaption>Plate No. 01 in daily use. Photographed in the studio, Lisbon.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section collection" id="products" aria-labelledby="collection-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="section-number">01 — Collection</p>
+            <h2 class="display-2" id="collection-title">Six objects for one home</h2>
+          </div>
+          <p class="section-head__intro">Six pieces this season. Each one had to earn its place: if it would not survive daily use in our own kitchen, it is not listed.</p>
+        </header>
+
+        <ul class="product-grid" role="list">
+          <li>
+            <a class="card" href="product/coupe-plate-set.html">
+              <span class="card__media">
+                <span class="media">
+                  <img src="assets/img/plate-still.jpg" width="800" height="1000" loading="lazy"
+                       alt="Four stacked coupe plates in pale stoneware with a rust-red bowl on top, seen from a low angle on a linen cloth.">
+                </span>
+              </span>
+              <span class="card__body">
+                <span class="card__row">
+                  <span class="card__name">Coupe Plate Set No. 01</span>
+                  <span class="card__price price">$64</span>
+                </span>
+                <span class="card__desc">Four stoneware plates, matte glaze, made for daily use.</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="card" href="product/two-handled-vessel.html">
+              <span class="card__media">
+                <span class="plate">
+                  <span class="plate__num">Plate 02</span>
+                  <span class="plate__figure" aria-hidden="true">02</span>
+                  <span class="plate__foot">Photograph pending</span>
+                </span>
+              </span>
+              <span class="card__body">
+                <span class="card__row">
+                  <span class="card__name">Two-Handled Vessel</span>
+                  <span class="card__price price">$82</span>
+                </span>
+                <span class="card__desc">Hand-thrown vase for stems that arrive without a plan.</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="card" href="product/the-pairing-box.html">
+              <span class="card__media">
+                <span class="plate">
+                  <span class="plate__num">Plate 03</span>
+                  <span class="plate__figure" aria-hidden="true">03</span>
+                  <span class="plate__foot">Photograph pending</span>
+                </span>
+              </span>
+              <span class="card__body">
+                <span class="card__row">
+                  <span class="card__name">The Pairing Box</span>
+                  <span class="card__price price">$120</span>
+                </span>
+                <span class="card__desc">Three objects our model chose to sit together.</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="card" href="product/linen-napkin-set.html">
+              <span class="card__media">
+                <span class="plate">
+                  <span class="plate__num">Plate 04</span>
+                  <span class="plate__figure" aria-hidden="true">04</span>
+                  <span class="plate__foot">Photograph pending</span>
+                </span>
+              </span>
+              <span class="card__body">
+                <span class="card__row">
+                  <span class="card__name">Linen Napkin Set</span>
+                  <span class="card__price price">$38</span>
+                </span>
+                <span class="card__desc">Four washed linen napkins that soften with every wash.</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="card" href="product/stoneware-tumbler-pair.html">
+              <span class="card__media">
+                <span class="plate">
+                  <span class="plate__num">Plate 05</span>
+                  <span class="plate__figure" aria-hidden="true">05</span>
+                  <span class="plate__foot">Photograph pending</span>
+                </span>
+              </span>
+              <span class="card__body">
+                <span class="card__row">
+                  <span class="card__name">Stoneware Tumbler Pair</span>
+                  <span class="card__price price">$46</span>
+                </span>
+                <span class="card__desc">Two cups for the last coffee of the evening.</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="card card--sold" href="product/beeswax-candle-no-03.html">
+              <span class="card__media">
+                <span class="plate">
+                  <span class="plate__num">Plate 06</span>
+                  <span class="plate__figure" aria-hidden="true">06</span>
+                  <span class="plate__foot">Photograph pending</span>
+                </span>
+                <span class="card__status"><span class="tag">Sold out</span></span>
+              </span>
+              <span class="card__body">
+                <span class="card__row">
+                  <span class="card__name">Beeswax Candle No. 03</span>
+                  <span class="card__price price">$28</span>
+                </span>
+                <span class="card__desc">Poured by hand, unscented, sixty hours of light.</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="note">Product photography for five of the six objects is still at the studio. Until it arrives, each slot shows its plate number. The first plate is a photograph of the actual set.</p>
+      </div>
+    </section>
+
+    <section class="band" aria-label="Editorial">
+      <div class="container">
+        <figure class="band__figure">
+          <div class="media">
+            <img src="assets/img/editorial-table.jpg" width="1600" height="686" loading="lazy"
+                 alt="A silver fork resting beside the dark rim of a glazed plate, on a pale linen cloth.">
+          </div>
+          <figcaption>
+            <span>Fired at 1,240°C, cooled slowly, then used every day.</span>
+            <span class="price">Plate No. 01 — $64</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="values" aria-labelledby="values-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="section-number">02 — How we choose</p>
+            <h2 class="display-2" id="values-title">A short catalogue, on purpose.</h2>
+          </div>
+          <p class="section-head__intro">Importance is not a matter of how much we sell, but of how little we are willing to list.</p>
+        </header>
+
+        <ol class="value-list">
+          <li class="value">
+            <span class="value__num">01</span>
+            <h3>Small on purpose</h3>
+            <p>Six objects, not six hundred. We add a few each season and let a few go, so that choosing stays a decision rather than a scroll.</p>
+          </li>
+          <li class="value">
+            <span class="value__num">02</span>
+            <h3>Made to be kept</h3>
+            <p>Stoneware that survives a dishwasher, linen that softens instead of wearing out. If it would not last ten years in our own kitchen, we do not list it.</p>
+          </li>
+          <li class="value">
+            <span class="value__num">03</span>
+            <h3>Technology that stays quiet</h3>
+            <p>No scores, no badges, no claims. The model reads five answers and puts three objects in front of you. The choosing is still yours.</p>
+          </li>
+        </ol>
+
+        <div class="values__tech">
+          <h3 class="label">What the model does</h3>
+          <p>The model was trained on pairs of objects that couples kept together for more than a year. It reads five short answers — the room, the light, the material you reach for, how you host, how often you move — and returns three objects that already sat side by side in other homes. It does not rank you, guess your taste from an email, or change the price. It only helps you start somewhere.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="section-number">03 — The people</p>
+            <h2 class="display-2" id="team-title">Three people, one rule</h2>
+          </div>
+          <p class="section-head__intro">We are three people who believe a home is assembled slowly. Nothing reaches this page without one of us using it first.</p>
+        </header>
+
+        <ul class="team-grid" role="list">
+          <li class="team-card">
+            <span class="plate plate--square" aria-hidden="true">
+              <span class="plate__num">Portrait 01</span>
+              <span class="plate__figure">IM</span>
+              <span class="plate__foot">Photograph pending</span>
+            </span>
+            <h3 class="display-4">Ines Marchetti</h3>
+            <p class="team-card__role">Founder &amp; Creative Director</p>
+            <p>Spent nine years buying tableware for a department store in Milan, then left to make a smaller catalogue. Chooses every object by hand.</p>
+          </li>
+          <li class="team-card">
+            <span class="plate plate--square" aria-hidden="true">
+              <span class="plate__num">Portrait 02</span>
+              <span class="plate__figure">TA</span>
+              <span class="plate__foot">Photograph pending</span>
+            </span>
+            <h3 class="display-4">Theo Aranda</h3>
+            <p class="team-card__role">Head of Objects</p>
+            <p>Trained as a ceramicist in Valencia. Tests each piece against a dishwasher, a small kitchen and two clumsy adults. Rejects nine things for every one we list.</p>
+          </li>
+          <li class="team-card">
+            <span class="plate plate--square" aria-hidden="true">
+              <span class="plate__num">Portrait 03</span>
+              <span class="plate__figure">PR</span>
+              <span class="plate__foot">Photograph pending</span>
+            </span>
+            <h3 class="display-4">Priya Raman</h3>
+            <p class="team-card__role">Machine Learning Lead</p>
+            <p>Built recommendation systems for a bookseller, left when the metrics started replacing the books. Now works only with five-question models.</p>
+          </li>
+        </ul>
+        <p class="note">Portraits are pending; the initials stand in until the shoot. Team members shown are part of this demo.</p>
+      </div>
+    </section>
+
+    <section class="section closing" aria-labelledby="closing-title">
+      <div class="container closing__inner">
+        <div>
+          <h2 class="display-2" id="closing-title">Start with one object.</h2>
+        </div>
+        <div class="closing__actions">
+          <p class="lede">Most couples begin with the plates and come back for the rest. If you would rather be guided, write to us and we will answer as people, not as a form.</p>
+          <a class="btn btn--primary" href="#products">Shop the collection</a>
+          <a class="link-arrow" href="contact.html">Talk to us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="wordmark">Marauder</span>
+          <p class="caption">Homeware for two, chosen by hand and paired with care. A small catalogue, rebuilt each season.</p>
+          <p class="footer__stamp">Est. 2026</p>
+        </div>
+        <nav class="footer__col" aria-label="Collection">
+          <h2>Collection</h2>
+          <a href="#products">All objects</a>
+          <a href="product/coupe-plate-set.html">Coupe Plate Set</a>
+          <a href="product/two-handled-vessel.html">Two-Handled Vessel</a>
+          <a href="product/the-pairing-box.html">The Pairing Box</a>
+        </nav>
+        <nav class="footer__col" aria-label="Company">
+          <h2>Company</h2>
+          <a href="#team">Team</a>
+          <a href="#values">How we choose</a>
+          <a href="contact.html">Contact</a>
+          <a href="terms.html">Terms of service</a>
+        </nav>
+        <div class="footer__col">
+          <h2>Studio</h2>
+          <address>Rua da Boavista 84<br>1200-069 Lisbon, Portugal</address>
+          <a href="mailto:hello@marauder.example">hello@marauder.example</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Marauder. Demo concept site: products, team, prices and address are fictional.</p>
+        <p>Photography via Unsplash (Wikimedia Commons). Cart and checkout are not connected.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
