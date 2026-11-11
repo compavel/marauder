@@ -1,0 +1,10 @@
+exclude:
+  - README.md
+  - CREDITS.md
+  - PRD.md
+  - DESIGN-BRIEF.md
+  - SECURITY.md
+  - _arsip
+  - docs
+  - _headers
+  - _redirects

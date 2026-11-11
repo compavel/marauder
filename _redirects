@@ -1,0 +1,12 @@
+# Netlify syntax. Netlify supports a custom 404 status here.
+# Cloudflare Pages only supports redirect codes (301/302/303/307/308) in
+# _redirects, so it ignores 404 rules - exclude these files from the deploy
+# there (or add a Pages Function) instead.
+/PRD.md            /404.html  404
+/DESIGN-BRIEF.md   /404.html  404
+/README.md         /404.html  404
+/CREDITS.md        /404.html  404
+/SECURITY.md       /404.html  404
+/_config.yml       /404.html  404
+/_arsip/*          /404.html  404
+/docs/*            /404.html  404
