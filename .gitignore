@@ -1,0 +1,11 @@
+# OS and editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Local environment / secrets (never expected here)
+.env
+.env.*
