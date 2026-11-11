@@ -9,3 +9,6 @@ desktop.ini
 # Local environment / secrets (never expected here)
 .env
 .env.*
+
+# Site assembled for deployment
+_dist/
