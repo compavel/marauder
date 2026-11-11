@@ -4,7 +4,9 @@ A concept storefront for a fictional homeware studio: a short catalogue of six o
 
 Built as a static HTML/CSS/JS site for a portfolio. There is no framework, no build step, and no backend — open a page and it runs.
 
-**Status:** complete and manually tested, not deployed. Cart, checkout and the contact form are demonstration-only.
+**Status:** complete, manually tested, and deployed to GitHub Pages. Cart, checkout and the contact form are demonstration-only.
+
+**Live demo:** https://compavel.github.io/marauder/
 
 ---
 
@@ -130,7 +132,7 @@ Opening `index.html` directly with `file://` mostly works, but a local server is
 
 Honest list of what is **not** finished:
 
-- **Deployment:** not deployed yet. No public URL.
+- **Deployment:** live on GitHub Pages at <https://compavel.github.io/marauder/>. GitHub Pages ignores `_headers`, so only the meta CSP and referrer policy apply there — no `X-Frame-Options`, `nosniff` or `Permissions-Policy`. Deploy to Netlify or Cloudflare Pages to get the full header set.
 - **Product photography:** only the Coupe Plate Set has a photograph. The other five products use a typographic "plate" placeholder (`PLATE 03` … `PHOTOGRAPH PENDING`) rather than stock photos that would misrepresent the objects.
 - **Team portraits:** placeholder monogram plates with the same "photograph pending" note.
 - **Cart and checkout:** not implemented. Buttons surface a demo note.
@@ -151,6 +153,7 @@ This is a static site: no accounts, sessions, database, API or payment flow. CSP
 - JSON-LD on product pages parses as valid JSON.
 - Keyboard: skip link, mobile menu open/close with `Esc` and focus return, form errors focus the first invalid field, success panel moves focus to its heading.
 - Browser console clean on the pages tested.
+- Live deployment checked: all pages and assets return `200`, internal documents return `404`, unknown paths serve the custom `404.html`, and the live HTML is byte-identical to the repository copy.
 
 ## Future improvements
 
