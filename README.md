@@ -132,18 +132,18 @@ Opening `index.html` directly with `file://` mostly works, but a local server is
 
 Honest list of what is **not** finished:
 
-- **Deployment:** live on GitHub Pages at <https://compavel.github.io/marauder/>. GitHub Pages ignores `_headers`, so only the meta CSP and referrer policy apply there — no `X-Frame-Options`, `nosniff` or `Permissions-Policy`. Deploy to Netlify or Cloudflare Pages to get the full header set.
+- **Deployment:** live on GitHub Pages at <https://compavel.github.io/marauder/>, published by the `Deploy site` workflow only after the checks pass. GitHub Pages ignores `_headers`, so only the meta CSP and referrer policy apply there — no `X-Frame-Options`, `nosniff` or `Permissions-Policy`. Deploy to Netlify or Cloudflare Pages to get the full header set.
 - **Product photography:** only the Coupe Plate Set has a photograph. The other five products use a typographic "plate" placeholder (`PLATE 03` … `PHOTOGRAPH PENDING`) rather than stock photos that would misrepresent the objects.
 - **Team portraits:** placeholder monogram plates with the same "photograph pending" note.
 - **Cart and checkout:** not implemented. Buttons surface a demo note.
 - **Contact form:** validates in the browser and shows a clearly labelled demo panel; it does not send or store anything. Server-side validation and rate limiting are required before it becomes a real contact channel (see [`SECURITY.md`](SECURITY.md)).
 - **Terms of service:** demonstration copy for a fictional studio, not legal advice.
 - **Six products instead of three:** the design brief targeted three example products; the catalogue was extended to six so the collection grid has no dead cards. This deviation is intentional and documented.
-- **No automated tests:** this is a static site with no test runner. Verification was done manually and with scripted browser checks (layout overflow at nine viewports, link/anchor resolution, heading and alt-text audit, JSON-LD validity, keyboard flows).
+- **No unit tests:** this is a static site with no application logic to unit test. Automated static checks cover links, anchors, markup, CSP and JS sinks; visual and interaction behaviour was verified manually and with scripted browser checks (layout overflow at nine viewports, keyboard flows).
 
 ## Security
 
-This is a static site: no accounts, sessions, database, API or payment flow. CSP and security headers are configured in `_headers` for hosts that support them, with a meta CSP fallback on every page. Internal documents are excluded from GitHub Pages via `_config.yml` and return `404` on Netlify via `_redirects`; Cloudflare Pages ignores `404` rules in `_redirects`, so leave those files out of the publish directory there. See [`SECURITY.md`](SECURITY.md) for the current posture and the requirements before adding a backend or checkout.
+This is a static site: no accounts, sessions, database, API or payment flow. CSP and security headers are configured in `_headers` for hosts that support them, with a meta CSP fallback on every page. Deployment runs through `.github/workflows/pages.yml`: `scripts/check.mjs` must pass, then `scripts/build-site.mjs` assembles a whitelisted `_dist` (pages and `assets/` only), so internal documents never reach the published site. `_redirects` still returns `404` for those paths on Netlify; Cloudflare Pages ignores `404` rules, so leave the files out of the publish directory there. See [`SECURITY.md`](SECURITY.md) for the current posture and the requirements before adding a backend or checkout.
 
 ## Verification performed
 
@@ -154,6 +154,16 @@ This is a static site: no accounts, sessions, database, API or payment flow. CSP
 - Keyboard: skip link, mobile menu open/close with `Esc` and focus return, form errors focus the first invalid field, success panel moves focus to its heading.
 - Browser console clean on the pages tested.
 - Live deployment checked: all pages and assets return `200`, internal documents return `404`, unknown paths serve the custom `404.html`, and the live HTML is byte-identical to the repository copy.
+
+## Automated checks
+
+```sh
+node scripts/check.mjs       # HTML, links, anchors, CSP, alt text, JSON-LD, JS sinks
+node --check assets/js/main.js
+node scripts/build-site.mjs  # assembles _dist exactly as the deploy does
+```
+
+The same commands run in `.github/workflows/pages.yml`. A failing check stops the build, so nothing reaches GitHub Pages until it passes.
 
 ## Future improvements
 
